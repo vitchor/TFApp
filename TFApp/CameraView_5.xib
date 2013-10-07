@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraView">
+            <connections>
+                <outlet property="cameraView" destination="6" id="14"/>
+                <outlet property="cancelButton" destination="2185" id="2247"/>
+                <outlet property="imagePreviewView" destination="686-dC-RY0" id="QXw-iW-N3Q"/>
+                <outlet property="infoButton" destination="2186" id="2248"/>
+                <outlet property="loadingView" destination="1272" id="1343"/>
+                <outlet property="pathView" destination="16" id="17"/>
+                <outlet property="previewView" destination="LUS-gp-2j4" id="bCB-Nx-HN4"/>
+                <outlet property="shootButton" destination="2184" id="2249"/>
+                <outlet property="spinner" destination="1322" id="1344"/>
+                <outlet property="torchOneButton" destination="2919" id="3091"/>
+                <outlet property="torchTwoButton" destination="2909" id="3092"/>
+                <outlet property="tutorialView" destination="3093" id="3099"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1698" userLabel="TopShadow View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1627" userLabel="BottomShadow View">
+                    <rect key="frame" x="0.0" y="479" width="320" height="45"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16" customClass="PathView">
+                    <rect key="frame" x="0.0" y="44" width="320" height="435"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2900" userLabel="First Focus View">
+                            <rect key="frame" x="60" y="60" width="80" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="1st-focus.png" translatesAutoresizingMaskIntoConstraints="NO" id="2912">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2919" userLabel="Button - Torch 1">
+                                    <rect key="frame" x="55" y="0.0" width="25" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="2920"/>
+                                        <constraint firstAttribute="height" constant="25" id="2921"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Torch 1" image="Torch-Button-Off-NoStroke.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2919" firstAttribute="trailing" secondItem="2900" secondAttribute="trailing" id="2913"/>
+                                <constraint firstItem="2919" firstAttribute="top" secondItem="2900" secondAttribute="top" id="2914"/>
+                                <constraint firstItem="2912" firstAttribute="trailing" secondItem="2900" secondAttribute="trailing" id="2915"/>
+                                <constraint firstItem="2912" firstAttribute="bottom" secondItem="2900" secondAttribute="bottom" id="2916"/>
+                                <constraint firstItem="2912" firstAttribute="top" secondItem="2900" secondAttribute="top" id="2917"/>
+                                <constraint firstItem="2912" firstAttribute="leading" secondItem="2900" secondAttribute="leading" id="2918"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2901" userLabel="Second Focus View">
+                            <rect key="frame" x="160" y="160" width="80" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="2nd-focus.png" translatesAutoresizingMaskIntoConstraints="NO" id="2902">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2909">
+                                    <rect key="frame" x="55" y="0.0" width="25" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="2910"/>
+                                        <constraint firstAttribute="height" constant="25" id="2911"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Torch 2" image="Torch-Button-Off-NoStroke.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2909" firstAttribute="trailing" secondItem="2901" secondAttribute="trailing" id="2903"/>
+                                <constraint firstItem="2909" firstAttribute="top" secondItem="2901" secondAttribute="top" id="2904"/>
+                                <constraint firstItem="2902" firstAttribute="bottom" secondItem="2901" secondAttribute="bottom" id="2905"/>
+                                <constraint firstItem="2902" firstAttribute="trailing" secondItem="2901" secondAttribute="trailing" id="2906"/>
+                                <constraint firstItem="2902" firstAttribute="leading" secondItem="2901" secondAttribute="leading" id="2907"/>
+                                <constraint firstItem="2902" firstAttribute="top" secondItem="2901" secondAttribute="top" id="2908"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="2900" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="60" id="3011"/>
+                        <constraint firstAttribute="trailing" secondItem="2900" secondAttribute="trailing" constant="180" id="3012"/>
+                        <constraint firstItem="2900" firstAttribute="top" secondItem="16" secondAttribute="top" constant="60" id="3013"/>
+                        <constraint firstItem="2901" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="160" id="3017"/>
+                        <constraint firstAttribute="trailing" secondItem="2901" secondAttribute="trailing" constant="80" id="3018"/>
+                        <constraint firstItem="2901" firstAttribute="top" secondItem="16" secondAttribute="top" constant="160" id="3020"/>
+                        <constraint firstAttribute="bottom" secondItem="2900" secondAttribute="bottom" constant="295" id="3084"/>
+                        <constraint firstAttribute="bottom" secondItem="2901" secondAttribute="bottom" constant="195" id="3085"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="cameraIcon" destination="2222" id="2244"/>
+                        <outlet property="cancelIcon" destination="2217" id="2246"/>
+                        <outlet property="firstFocusX" destination="3011" id="3032"/>
+                        <outlet property="firstFocusX2" destination="3012" id="3033"/>
+                        <outlet property="firstFocusY" destination="3013" id="3034"/>
+                        <outlet property="firstFocusY2" destination="3084" id="3089"/>
+                        <outlet property="firstImage" destination="2900" id="3028"/>
+                        <outlet property="helpIcon" destination="2225" id="2245"/>
+                        <outlet property="secondFocusX" destination="3017" id="3036"/>
+                        <outlet property="secondFocusX2" destination="3018" id="3037"/>
+                        <outlet property="secondFocusY" destination="3020" id="3039"/>
+                        <outlet property="secondFocusY2" destination="3085" id="3090"/>
+                        <outlet property="secondImage" destination="2901" id="3029"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2179" userLabel="ToolBar View">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CameraView-MenuBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="2180" userLabel="ToolBar">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2185" userLabel="LeftButton">
+                            <rect key="frame" x="20" y="5" width="56" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="2212"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="CameraView-LeftButton.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="2238"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2186" userLabel="RightButton">
+                            <rect key="frame" x="233" y="5" width="67" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="67" id="2211"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="CameraView-RightButton.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="helpAction:" destination="-1" eventType="touchUpInside" id="2239"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2184" userLabel="ShootButton">
+                            <rect key="frame" x="102" y="6" width="116" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="2213"/>
+                                <constraint firstAttribute="width" constant="116" id="2214"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="CameraView-ShootButton.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="shootAction:" destination="-1" eventType="touchUpInside" id="2240"/>
+                            </connections>
+                        </button>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2182">
+                            <rect key="frame" x="143" y="6" width="35" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2222" userLabel="CameraIcon">
+                                    <rect key="frame" x="2" y="6" width="30" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="2223"/>
+                                        <constraint firstAttribute="width" constant="30" id="2224"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" image="CameraView-CameraIcon.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2222" firstAttribute="centerY" secondItem="2182" secondAttribute="centerY" id="2220"/>
+                                <constraint firstItem="2222" firstAttribute="centerX" secondItem="2182" secondAttribute="centerX" id="2221"/>
+                            </constraints>
+                        </view>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2181">
+                            <rect key="frame" x="255" y="10" width="24" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2225" userLabel="HelpIcon">
+                                    <rect key="frame" x="6" y="1" width="12" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="12" id="2228"/>
+                                        <constraint firstAttribute="height" constant="22" id="2229"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" image="CameraView-HelpIcon.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2225" firstAttribute="centerY" secondItem="2181" secondAttribute="centerY" id="2226"/>
+                                <constraint firstItem="2225" firstAttribute="centerX" secondItem="2181" secondAttribute="centerX" id="2227"/>
+                            </constraints>
+                        </view>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2183">
+                            <rect key="frame" x="42" y="10" width="23" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2217" userLabel="CancelIcon">
+                                    <rect key="frame" x="1" y="1" width="21" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="2218"/>
+                                        <constraint firstAttribute="width" constant="21" id="2219"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" image="CameraView-CancelIcon.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2217" firstAttribute="centerY" secondItem="2183" secondAttribute="centerY" id="2215"/>
+                                <constraint firstItem="2217" firstAttribute="centerX" secondItem="2183" secondAttribute="centerX" id="2216"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2180" firstAttribute="trailing" secondItem="2179" secondAttribute="trailing" id="2187"/>
+                        <constraint firstItem="2180" firstAttribute="leading" secondItem="2179" secondAttribute="leading" id="2188"/>
+                        <constraint firstItem="2180" firstAttribute="top" secondItem="2179" secondAttribute="top" id="2189"/>
+                        <constraint firstItem="2180" firstAttribute="bottom" secondItem="2179" secondAttribute="bottom" id="2190"/>
+                        <constraint firstItem="2185" firstAttribute="leading" secondItem="2179" secondAttribute="leading" constant="20" symbolic="YES" id="2191"/>
+                        <constraint firstItem="2183" firstAttribute="centerY" secondItem="2185" secondAttribute="centerY" id="2192"/>
+                        <constraint firstItem="2183" firstAttribute="bottom" secondItem="2181" secondAttribute="bottom" id="2193"/>
+                        <constraint firstItem="2183" firstAttribute="top" secondItem="2181" secondAttribute="top" id="2194"/>
+                        <constraint firstItem="2183" firstAttribute="top" secondItem="2179" secondAttribute="top" constant="10" id="2195"/>
+                        <constraint firstItem="2183" firstAttribute="centerY" secondItem="2182" secondAttribute="centerY" id="2197"/>
+                        <constraint firstItem="2183" firstAttribute="leading" secondItem="2179" secondAttribute="leading" constant="42" id="2198"/>
+                        <constraint firstAttribute="trailing" secondItem="2183" secondAttribute="trailing" constant="255" id="2199"/>
+                        <constraint firstItem="2182" firstAttribute="centerX" secondItem="2184" secondAttribute="centerX" id="2200"/>
+                        <constraint firstItem="2182" firstAttribute="leading" secondItem="2179" secondAttribute="leading" constant="143" id="2201"/>
+                        <constraint firstItem="2182" firstAttribute="bottom" secondItem="2185" secondAttribute="bottom" id="2202"/>
+                        <constraint firstItem="2182" firstAttribute="bottom" secondItem="2186" secondAttribute="bottom" id="2203"/>
+                        <constraint firstItem="2182" firstAttribute="top" secondItem="2184" secondAttribute="top" id="2204"/>
+                        <constraint firstItem="2182" firstAttribute="bottom" secondItem="2184" secondAttribute="bottom" id="2205"/>
+                        <constraint firstItem="2182" firstAttribute="centerX" secondItem="2180" secondAttribute="centerX" id="2206"/>
+                        <constraint firstAttribute="trailing" secondItem="2186" secondAttribute="trailing" constant="20" symbolic="YES" id="2207"/>
+                        <constraint firstItem="2186" firstAttribute="top" secondItem="2185" secondAttribute="top" id="2208"/>
+                        <constraint firstItem="2181" firstAttribute="centerX" secondItem="2186" secondAttribute="centerX" id="2209"/>
+                        <constraint firstItem="2181" firstAttribute="leading" secondItem="2179" secondAttribute="leading" constant="255" id="2210"/>
+                        <constraint firstItem="2180" firstAttribute="centerY" secondItem="2181" secondAttribute="centerY" id="2230"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1272" userLabel="Loading View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1261">
+                            <rect key="frame" x="139" y="251" width="73" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <size key="shadowOffset" width="0.0" height="1"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1322">
+                            <rect key="frame" x="109" y="252" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="1322" firstAttribute="bottom" secondItem="1261" secondAttribute="bottom" id="1330"/>
+                        <constraint firstItem="1322" firstAttribute="centerY" secondItem="1272" secondAttribute="centerY" id="1331"/>
+                        <constraint firstItem="1322" firstAttribute="leading" secondItem="1272" secondAttribute="leading" constant="109" id="1416"/>
+                        <constraint firstItem="1261" firstAttribute="leading" secondItem="1272" secondAttribute="leading" constant="139" id="1417"/>
+                    </constraints>
+                </view>
+                <imageView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3093" userLabel="Tutorial View" customClass="TutorialView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="528" id="3204"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="supportEmailLabel" destination="3106" id="3159"/>
+                    </connections>
+                </imageView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="left" text="support@dyfoc.us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3106" userLabel="SupportEmail Label">
+                    <rect key="frame" x="63" y="290" width="194" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="194" id="3109"/>
+                        <constraint firstAttribute="height" constant="25" id="3233"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="1" green="0.5450980392" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LUS-gp-2j4" userLabel="PreviewView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="686-dC-RY0" userLabel="Image Preview">
+                            <rect key="frame" x="20" y="143" width="281" height="281"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1272" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1345"/>
+                <constraint firstItem="1272" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="1347"/>
+                <constraint firstItem="1272" firstAttribute="top" secondItem="1" secondAttribute="top" id="1408"/>
+                <constraint firstItem="6" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="1712"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1713"/>
+                <constraint firstItem="1627" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1750"/>
+                <constraint firstItem="1698" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="1751"/>
+                <constraint firstItem="1627" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="1753"/>
+                <constraint firstItem="1698" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1754"/>
+                <constraint firstItem="1698" firstAttribute="top" secondItem="1" secondAttribute="top" id="1830"/>
+                <constraint firstItem="6" firstAttribute="top" secondItem="1" secondAttribute="top" id="1906"/>
+                <constraint firstItem="6" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="1960"/>
+                <constraint firstItem="1627" firstAttribute="top" secondItem="1" secondAttribute="top" constant="479" id="1963"/>
+                <constraint firstAttribute="bottom" secondItem="1698" secondAttribute="bottom" constant="524" id="1965"/>
+                <constraint firstItem="2179" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="2231"/>
+                <constraint firstItem="2179" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="2232"/>
+                <constraint firstItem="2179" firstAttribute="top" secondItem="1" secondAttribute="top" constant="524" id="2236"/>
+                <constraint firstItem="2179" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="2237"/>
+                <constraint firstItem="16" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3021"/>
+                <constraint firstItem="16" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="3023"/>
+                <constraint firstAttribute="bottom" secondItem="16" secondAttribute="bottom" constant="89" id="3087"/>
+                <constraint firstItem="16" firstAttribute="top" secondItem="1" secondAttribute="top" constant="44" id="3088"/>
+                <constraint firstItem="3093" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3096"/>
+                <constraint firstItem="3093" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="3097"/>
+                <constraint firstItem="3093" firstAttribute="top" secondItem="1" secondAttribute="top" id="3102"/>
+                <constraint firstItem="3106" firstAttribute="centerX" secondItem="1627" secondAttribute="centerX" id="3111"/>
+                <constraint firstItem="1627" firstAttribute="bottom" secondItem="1272" secondAttribute="bottom" id="3199"/>
+                <constraint firstAttribute="bottom" secondItem="1627" secondAttribute="bottom" constant="44" id="3202"/>
+                <constraint firstAttribute="bottom" secondItem="3106" secondAttribute="bottom" constant="253" id="3234"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1st-focus.png" width="197" height="197"/>
+        <image name="2nd-focus.png" width="197" height="197"/>
+        <image name="CameraView-CameraIcon.png" width="62" height="44"/>
+        <image name="CameraView-CancelIcon.png" width="42" height="42"/>
+        <image name="CameraView-HelpIcon.png" width="24" height="44"/>
+        <image name="CameraView-LeftButton.png" width="112" height="68"/>
+        <image name="CameraView-MenuBar.png" width="640" height="92"/>
+        <image name="CameraView-RightButton.png" width="114" height="68"/>
+        <image name="CameraView-ShootButton.png" width="232" height="66"/>
+        <image name="Torch-Button-Off-NoStroke.png" width="375" height="375"/>
+    </resources>
+</document>
